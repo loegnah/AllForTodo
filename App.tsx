@@ -1,15 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import tw, { useDeviceContext } from "twrnc";
 
-import useCachedResources from "hooks/useCachedResources";
-import useColorScheme from "hooks/useColorScheme";
-import Navigation from "navigation/index";
+import useCachedResources from "@hooks/useCachedResources";
+import useColorScheme from "@hooks/useColorScheme";
+import Navigation from "@src/navigation";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
-  useDeviceContext(tw);
 
   if (!isLoadingComplete) {
     return null;

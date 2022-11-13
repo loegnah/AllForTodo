@@ -1,6 +1,5 @@
 import * as WebBrowser from "expo-web-browser";
 import { StyleSheet, TouchableOpacity } from "react-native";
-import tw from "twrnc";
 
 import Colors from "../constants/Colors";
 import { MonoText } from "./StyledText";
@@ -10,7 +9,9 @@ export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
-        <Text style={styles.test}>Open up the code for this screen:</Text>
+        <Text style={styles.getStartedText}>
+          Open up the code for this screen:
+        </Text>
 
         <View
           style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
@@ -53,7 +54,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginHorizontal: 50,
   },
-  test: tw`text-[17px] leading-[24px] text-center text-blue-600 dark:text-orange-600`,
   homeScreenFilename: {
     marginVertical: 7,
   },

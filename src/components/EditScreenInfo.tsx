@@ -5,7 +5,7 @@ import Colors from "../constants/Colors";
 import { MonoText } from "./StyledText";
 import { Text, View } from "./Themed";
 
-export default function EditScreenInfo({ path }: { path: string }) {
+function EditScreenInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -78,3 +78,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
+
+export default EditScreenInfo;

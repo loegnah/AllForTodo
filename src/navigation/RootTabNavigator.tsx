@@ -14,11 +14,11 @@ import TabTwoScreen from "@screens/TabTwoScreen";
 import TabBarIcon from "@components/icons/TabBarIcon";
 import type { RootStackParamList } from "./RootNavigator";
 
-export type RootTabParamList = {
+type RootTabParamList = {
   TabOne: undefined;
   TabTwo: undefined;
 };
-export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
+type RootTabScreenProps<Screen extends keyof RootTabParamList> =
   CompositeScreenProps<
     BottomTabScreenProps<RootTabParamList, Screen>,
     NativeStackScreenProps<RootStackParamList>
@@ -26,7 +26,7 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 
-export default function RootTabNavigator() {
+function RootTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (
@@ -70,3 +70,6 @@ export default function RootTabNavigator() {
     </Tab.Navigator>
   );
 }
+
+export type { RootTabScreenProps, RootTabParamList };
+export default RootTabNavigator;

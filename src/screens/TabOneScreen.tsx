@@ -4,9 +4,7 @@ import EditScreenInfo from "@components/EditScreenInfo";
 import { Text, View } from "@components/Themed";
 import type { RootTabScreenProps } from "@navigation/RootTabNavigator";
 
-export default function TabOneScreen({
-  navigation,
-}: RootTabScreenProps<"TabOne">) {
+function TabOneScreen({ navigation }: RootTabScreenProps<"TabOne">) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One</Text>
@@ -36,3 +34,5 @@ const styles = StyleSheet.create({
     width: "80%",
   },
 });
+
+export default TabOneScreen;

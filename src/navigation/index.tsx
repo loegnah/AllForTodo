@@ -15,11 +15,7 @@ declare global {
   }
 }
 
-export default function Navigation({
-  colorScheme,
-}: {
-  colorScheme: ColorSchemeName;
-}) {
+function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
@@ -29,3 +25,5 @@ export default function Navigation({
     </NavigationContainer>
   );
 }
+
+export default Navigation;

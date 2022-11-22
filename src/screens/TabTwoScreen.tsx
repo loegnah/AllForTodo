@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import EditScreenInfo from "@components/EditScreenInfo";
 import { Text, View } from "@components/Themed";
 
-export default function TabTwoScreen() {
+function TabTwoScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
@@ -33,3 +33,5 @@ const styles = StyleSheet.create({
     width: "80%",
   },
 });
+
+export default TabTwoScreen;

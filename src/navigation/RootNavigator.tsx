@@ -9,17 +9,18 @@ import ModalScreen from "@screens/ModalScreen";
 import RootTabNavigator from "@navigation/RootTabNavigator";
 import type { RootTabParamList } from "@navigation/RootTabNavigator";
 
-export type RootStackParamList = {
+type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   NotFound: undefined;
 };
-export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
+
+type RootStackScreenProps<Screen extends keyof RootStackParamList> =
   NativeStackScreenProps<RootStackParamList, Screen>;
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-export default function RootNavigator() {
+function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -38,3 +39,6 @@ export default function RootNavigator() {
     </Stack.Navigator>
   );
 }
+
+export type { RootStackParamList, RootStackScreenProps };
+export default RootNavigator;
